@@ -23,12 +23,30 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
-import "bootstrap";
+// import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+
+  const gouvernailBars = document.querySelector(".gouvernail-bars");
+  const gouvernailRond = document.querySelector(".gouvernail-rond");
+  const containerBarnav = document.querySelector(".container-barnav");
+  const pageOpacity = document.querySelector(".pageOpacity");
+  const crewcard = document.querySelectorAll(".crewcard")
+
+  gouvernailBars.addEventListener('click', event => {
+    gouvernailBars.classList.toggle("active")
+    gouvernailRond.classList.toggle("active")
+    containerBarnav.classList.toggle("active")
+    pageOpacity.classList.toggle("active")
+  })
+
+    crewcard.forEach(crew => {
+    crew.addEventListener("click", event => {
+      crew.classList.toggle("active")
+      console.log(event.currentTarget.closest('.room'))
+    })
+  })
 });
