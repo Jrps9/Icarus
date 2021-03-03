@@ -1,0 +1,153 @@
+.pageroom {
+  display:flex;
+  justify-content: center;
+  // animation: 1s apparition 1s linear forwards;
+  // opacity: 0;
+}
+
+.room {
+  margin-top: 5%;
+  position: relative;
+  height: 80vh;
+  width: 90vw;
+  background-color: white;
+  transition: 1s ease-out;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow: hidden;
+
+  &.active {
+    opacity: 0.1;
+    transition: 1s ease-out;
+    pointer-events: none;
+  }
+}
+
+.crewcard {
+  position: relative;
+  background-color: white;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  transition: 1s ease;
+  &.active {
+    height: 100%;
+    .circle {
+      height: 100%;
+      width: 100%;
+    }
+    .circle::before {
+      clip-path: circle(50% at center);
+      transition: 1s ease-out;
+    }
+    .image-jl {
+      height: 550px;
+      width: 550px;
+      transform: translate(20%, -40%);
+    }
+    .content--jl {
+      left: 40%;
+      top: 55%;
+    }
+
+    .image-caro {
+      transform: translate(-150%, -42%);
+      height: 400px;
+      width: 400px;
+    }
+    .content--caro {
+      left: 60%;
+      top: 50%;
+    }
+    .image-roro {
+      height: 350px;
+      width: 350px;
+    }
+    .content {
+      opacity: 1;
+      transition: 1s ease-out;
+      transition-delay: 1s;
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  height: 70%;
+  width: 70%;
+  background-color: white;
+  overflow: hidden;
+  transition: 1s ease-out;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+
+.circle--1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bleu-pale;
+  clip-path: circle(40% at center);
+  transition: 1s;
+}
+
+.circle--2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $rose-pale;
+  clip-path: circle(40% at center);
+  transition: 1s;
+}
+
+.circle--3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $jaune-pale;;
+  clip-path: circle(40% at center);
+  transition: 1s;
+}
+
+.circle--4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $vert-pale;
+  clip-path: circle(40% at center);
+  transition: 1s;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  height: 100%;
+  width: 40%;
+  opacity: 0;
+}
+
+.modal-card {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}

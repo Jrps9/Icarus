@@ -1,0 +1,29 @@
+@media (max-width: 960px) {
+  //   body {
+  //   width: 700px;
+  // }
+}
+
+@media (max-width: 720px) {
+  //   body {
+  //   width: 500px;
+  // }
+}
+
+@media (max-width: 1200px) {
+  .container-barnav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    transform: translate(-0%, -80%);
+    transition: 1s ease-out;
+    &.active {
+      transform: translate(-0%, -0%);
+    }
+  }
+  .barnav {
+    display: block;
+    text-align: center;
+  }
+
+}

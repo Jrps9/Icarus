@@ -1,0 +1,8 @@
+.pageOpacity {
+  opacity: 1;
+  transition: 1s ease-out;
+  &.active {
+    opacity: 0.02;
+    pointer-events: none;
+  }
+}
