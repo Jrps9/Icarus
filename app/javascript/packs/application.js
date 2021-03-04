@@ -32,6 +32,7 @@ document.addEventListener('turbolinks:load', () => {
 
   const gouvernailBars = document.querySelector(".gouvernail-bars");
   const gouvernailRond = document.querySelector(".gouvernail-rond");
+  const gouvernailRond2 = document.querySelector(".gouvernail-rond2");
   const containerBarnav = document.querySelector(".container-barnav");
   const pageOpacity = document.querySelector(".pageOpacity");
   const crewcard = document.querySelectorAll(".crewcard")
@@ -39,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   gouvernailBars.addEventListener('click', event => {
     gouvernailBars.classList.toggle("active")
     gouvernailRond.classList.toggle("active")
+    gouvernailRond2.classList.toggle("active")
     containerBarnav.classList.toggle("active")
     pageOpacity.classList.toggle("active")
   })
@@ -49,4 +51,6 @@ document.addEventListener('turbolinks:load', () => {
       console.log(event.currentTarget.closest('.room'))
     })
   })
+  document.addEventListener("mousse")
+
 });
