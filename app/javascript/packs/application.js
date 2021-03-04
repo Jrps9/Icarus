@@ -36,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   const containerBarnav = document.querySelector(".container-barnav");
   const pageOpacity = document.querySelector(".pageOpacity");
   const crewcard = document.querySelectorAll(".crewcard")
+  const gouv = document.querySelectorAll(".gouvernail-container")
 
   gouvernailBars.addEventListener('click', event => {
     gouvernailBars.classList.toggle("active")
@@ -51,6 +52,12 @@ document.addEventListener('turbolinks:load', () => {
       console.log(event.currentTarget.closest('.room'))
     })
   })
-  document.addEventListener("mousse")
+
+  window.addEventListener("mousemove", event => {
+    event.preventDefault();
+    console.log(event.clientX);
+    console.log(gouv);
+    gouv.style.transform =`rotate(+${event.clientX}deg);`
+  })
 
 });
