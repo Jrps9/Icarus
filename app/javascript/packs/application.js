@@ -51,4 +51,6 @@ document.addEventListener('turbolinks:load', () => {
       console.log(event.currentTarget.closest('.room'))
     })
   })
+  document.addEventListener("mousse")
+
 });
