@@ -14,7 +14,6 @@
 
 .barnav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 50px 0px 25px 0px;
 }
@@ -62,7 +61,7 @@
   border-radius: 50%;
   border: 1px solid black;
   opacity: 0;
-  transition: opacity 1s ease-out;
+  transition: opacity 1s cubic-bezier(.44,.69,.27,1.27);
   &.active {
     opacity: 1;
   }
@@ -79,7 +78,7 @@
   border-radius: 50%;
   border: 1px solid black;
   opacity: 0;
-  transition: opacity 1s ease-out;
+  transition: opacity 1s ease-in-out;
   &.active {
     opacity: 1;
   }
@@ -98,17 +97,17 @@
     height: 1px;
     width: 100%;
     background-color: black;
-    transition: 0.6s ease-out;
+    transition: 0.7s cubic-bezier(.44,.69,.27,1.27);
     &::before {
       visibility: hidden;
       position: absolute;
       content: "";
       width: 3px;
       height: 3px;
+      right: 0;
       border-radius: 50%;
       background-color:black;
-      right: 0%;
-      transform: translate(-0%, -50%);
+      transform: translate(-0%, -40%);
     }
     &::after {
       visibility: hidden;
@@ -116,7 +115,7 @@
       content: "";
       width: 3px;
       height: 3px;
-      transform: translate(-0%, -50%);
+      transform: translate(-0%, -40%);
       border-radius: 50%;
       background-color:black;
 
@@ -128,9 +127,11 @@
       transform: translate3d(0, +$offsetY, 0);
     }
     &.bar--2 {
+      visibility: hidden;
       transform: translate3d(0, +$offsetY, 0);
     }
     &.bar--3 {
+      visibility: hidden;
       transform: translate3d(0, -$offsetY, 0);
     }
     &.bar--4 {
@@ -161,45 +162,47 @@
     .bar::before {
       visibility: visible;
       transition-delay: 0.5s;
-      transition: 0.5s ease-out;
+      transition: 0.5s cubic-bezier(.44,.69,.27,1.27);
     }
     .bar::after {
       visibility: visible;
       transition-delay: 1s;
-      transition: 0.5s ease-out;
+      transition: 0.5s cubic-bezier(.44,.69,.27,1.27);
     }
     .bar--1 {
       transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(45deg);
-      transition: 2s ease-out;
+      transition: 1s cubic-bezier(.44,.69,.27,1.27);
     }
     .bar--2 {
       transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(90deg);
-      transition: 2s ease-out;
+      transition: 1s cubic-bezier(.44,.69,.27,1.27);
+      visibility: visible;
     }
     .bar--3 {
       transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(135deg);
-      transition: 2s ease-out;
+      transition: 1s cubic-bezier(.44,.69,.27,1.27);
+      visibility: visible;
     }
     .bar--4 {
       transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(180deg);
-      transition: 2s ease-out;
+      transition: 1s cubic-bezier(.44,.69,.27,1.27);
     }
     &:hover {
       .bar--1 {
-        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(225deg);
-        transition: 1s ease-out;
+        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(90deg);
+        transition: 1s cubic-bezier(.44,.69,.27,1.27);
       }
       .bar--2 {
-        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(270deg);
-        transition: 1s ease-out;
+        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(135deg);
+        transition: 1s cubic-bezier(.44,.69,.27,1.27);
       }
       .bar--3 {
-        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(315deg);
-        transition: 1s ease-out;
+        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(180deg);
+        transition: 1s cubic-bezier(.44,.69,.27,1.27);
       }
       .bar--4 {
-        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(360deg);
-        transition: 1s ease-out;
+        transform: translate3d(0, calc(0* #{$offsetY}), 0) rotate(225deg);
+        transition: 1s cubic-bezier(.44,.69,.27,1.27);
       }
     }
   }
