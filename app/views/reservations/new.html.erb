@@ -1,0 +1,10 @@
+<div class="pageOpacity">
+  <h1>nouvelle resa</h1>
+  <div class="resa">
+    <%= simple_form_for (@reservation) do |f| %>
+      <%= f.input :name %>
+      <br>
+      <%= f.button :submit, class: "barnavlink"%>
+    <% end %>
+  </div>
+</div>

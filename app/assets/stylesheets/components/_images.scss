@@ -1,5 +1,4 @@
-.image-jl {
-  background-image: url("jlpbg.png");
+.image {
   background-position: center;
   background-size: cover;
   height: 550px;
@@ -10,46 +9,19 @@
   top: 50%;
   transform: translate(-50%, -35%);
   transition: 1s ease-out;
-}
-
-.image-caro {
-  background-image: url("carreauseule.png");
-  background-position: center;
-  background-size: cover;
-  height: 550px;
-  width: 550px;
-  z-index: 1000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -35%);
-  transition: 1s ease-out;
-}
-
-.image-roro {
+  &.image--jl {
+   background-image: url("jlpbg.png");
+  }
+  &.image--caro {
+   background-image: url("carreauseule.png");
+   transform: translate(-50%, -40%);
+  }
+  &.image--roro {
   background-image: url("rorobgpropre.png");
-  background-position: center;
-  background-size: cover;
-  height: 550px;
-  width: 550px;
-  z-index: 1000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
-  transition: 1s ease-out;
-}
-
-.image-alex {
+  }
+  &.image--choco {
   background-image: url("alex.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 550px;
-  width: 550px;
-  z-index: 1000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
-  transition: 1s ease-out;
+  }
 }

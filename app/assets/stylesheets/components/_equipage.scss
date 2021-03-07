@@ -17,11 +17,11 @@
   flex-direction: column;
   overflow: hidden;
 
-  &.active {
-    opacity: 0.1;
-    transition: 1s ease-out;
-    pointer-events: none;
-  }
+  // &.active {
+  //   opacity: 0.1;
+  //   transition: 1s ease-out;
+  //   pointer-events: none;
+  // }
 }
 
 .crewcard {
@@ -41,7 +41,7 @@
       clip-path: circle(50% at center);
       transition: 1s ease-out;
     }
-    .image-jl {
+    .image--jl {
       height: 550px;
       width: 550px;
       transform: translate(20%, -40%);
@@ -51,7 +51,7 @@
       top: 55%;
     }
 
-    .image-caro {
+    .image--caro {
       transform: translate(-150%, -42%);
       height: 400px;
       width: 400px;
@@ -60,7 +60,7 @@
       left: 60%;
       top: 50%;
     }
-    .image-roro {
+    .image--roro {
       height: 350px;
       width: 350px;
     }

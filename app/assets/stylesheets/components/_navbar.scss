@@ -14,7 +14,6 @@
 
 .barnav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 50px 0px 25px 0px;
 }
@@ -105,10 +104,10 @@
       content: "";
       width: 3px;
       height: 3px;
+      right: 0;
       border-radius: 50%;
       background-color:black;
-      right: 0%;
-      transform: translate(-0%, -50%);
+      transform: translate(-0%, -40%);
     }
     &::after {
       visibility: hidden;
@@ -116,7 +115,7 @@
       content: "";
       width: 3px;
       height: 3px;
-      transform: translate(-0%, -50%);
+      transform: translate(-0%, -40%);
       border-radius: 50%;
       background-color:black;
 
