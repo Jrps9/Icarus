@@ -39,6 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   const pageOpacity = document.querySelector(".pageOpacity");
   const crewcard = document.querySelectorAll(".crewcard");
   const barnav = document.querySelector(".container-barnav");
+  const barnavlink = document.querySelectorAll(".barnavlink");
   const gouvernail = document.querySelector(".gouvernail-container");
 
   gouvernailBars.addEventListener('click', event => {
@@ -50,52 +51,55 @@ document.addEventListener('turbolinks:load', () => {
   })
 
     crewcard.forEach(crew => {
-    crew.addEventListener("click", event => {
-      crew.classList.toggle("active")
-      console.log(event.currentTarget.closest('.room'))
+      crew.addEventListener("click", e => {
+        if ( crew.classList.value !== "crewcard active") {
+          activateur(e);
+        } else off(e);
+      })
     })
-  })
+
+    function off(e) {
+      e.currentTarget.classList.remove("active")
+    }
+
+    function activateur(e) {
+      e.currentTarget.offsetParent.children[0].classList.remove("active")
+      e.currentTarget.offsetParent.children[1].classList.remove("active")
+      e.currentTarget.offsetParent.children[2].classList.remove("active")
+      e.currentTarget.offsetParent.children[3].classList.remove("active")
+      e.currentTarget.classList.add("active")
+    }
 
    function redresse(e) {
        if (gouvernailBars.className === "gouvernail-bars active") {
         rotator(e);
-        remover(e);
        // barnav.addEventListener("mousemove", rotator)
        } else gouvernailBars.style.transform = `rotate(${0}deg)`
-       return
-   }
-  // setInterval(rotator, 2000)
-  // setInterval(remover, 3000)
-
-   const walk = 500;
-
-
-   function remover(e) {
-    console.log("rotator");
-    document.removeEventListener("mousemove", rot)
    }
 
    function rotator(e) {
     console.log("coucou")
-    document.addEventListener("mousemove", rot)
+      barnav.addEventListener("mouseover", rot)
    }
 
+  const walk = 500;
   function rot(e) {
+    console.dir(e.currentTarget)
     const { offsetWidth: width, offsetHeight: height} = barnav;
-   let { offsetX: x, offsetY: y} = e;
+    let { offsetX: x, offsetY: y} = e;
 
        if (this !== e.target) {
         x = x + e.target.offsetLeft;
         y = y + e.target.offsetTop;
         }
-
        const xWalk = Math.round((x / width * walk) - (walk / 2));
-
+       console.log(e.offsetX)
        if (gouvernailBars.className === "gouvernail-bars active") {
-       gouvernailBars.style.transform = `rotate(${+10}deg)`
-       } else gouvernailBars.style.transform = `rotate(${0}deg)`
+        gouvernailBars.style.transform = `rotate(${(x*-1)/15}deg)`
+        } else gouvernailBars.style.transform = `rotate(${0}deg)`
   }
 
-   gouvernailBars.addEventListener("click", redresse)
+  gouvernailBars.addEventListener("click", redresse)
+
 })
 
