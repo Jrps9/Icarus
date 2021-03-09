@@ -1,8 +1,13 @@
-<h1>Calendrier Index</h1>
-<% @reservations.each do |reservation| %>
-  <%= reservation.name %>
-<% end %>
+<div class="pageOpacity">
+  <h1>Calendrier Index</h1>
+  <% @reservations.each do |reservation| %>
+    <%= reservation.name %>
+  <% end %>
 
-<%= link_to new_reservation_path, class: "barnavlink" do%>
-<p>Nouvelle reservation</p><span></span>
-<% end %>
+  <%= link_to new_reservation_path, class: "barnavlink" do%>
+  <p>Nouvelleee reservation</p><span></span>
+  <% end %>
+
+</div>
+
+

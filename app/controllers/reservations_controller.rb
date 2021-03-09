@@ -8,6 +8,23 @@ class ReservationsController < ApplicationController
   end
 
   def show
+    @reservation = Reservation.find(params[:id])
+  end
+
+  def destroy
+    reservation = reservation.find(params[:id])
+    reservation.destroy
+    redirect_to reservations_path
+  end
+
+  def edit
+    @reservation = reservation.find(params[:id])
+  end
+
+  def update
+    @reservation = reservation.find(params[:id])
+    @reservation.update(reservation_params)
+    redirect_to reservations_path(@reservations)
   end
 
   def create
@@ -19,10 +36,9 @@ class ReservationsController < ApplicationController
     end
   end
 
-private
+  private
 
   def reservation_params
     params.require(:reservation).permit(:name)
   end
-
 end

@@ -3,6 +3,13 @@
   opacity: 1;
   transition: 1s ease-out;
   height: 100vh;
+  &.du--port {
+    // background-image: url("port.jpg");
+    // // background-size: cover;
+    // // background-position: center;
+    // width: 200vw;
+    // height: 100vh;
+  }
   &.active {
     opacity: 0.03;
     pointer-events: none;
