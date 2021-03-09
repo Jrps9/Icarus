@@ -1,4 +1,8 @@
 class Reservation < ApplicationRecord
-  has_many :marchandise
-  has_many :review
+  belongs_to :user
+  has_many :marchandise, dependent: :destroy
+  has_many :review, dependent: :destroy
+
+  validates :name, presence: true
+  validates :start_day, presence: true
 end
