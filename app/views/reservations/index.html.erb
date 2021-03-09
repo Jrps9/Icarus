@@ -1,6 +1,7 @@
 <div class="pageOpacity">
     <div class="container-resa">
       <div class="tableau-resa">
+        <span class="bouee"></span>
       <%= link_to new_reservation_path, class: "barnavlink" do%>
       <p>Nouvelleee reservation</p><span></span>
       <% end %>
@@ -10,11 +11,11 @@
         <div class="list-resa">
           <% @reservations.each do |reservation| %>
           <div class="resa">
-            <div class="initiateur-resa">
-              <p><%= reservation.user.name %></p>
-            </div>
             <div class="photo-resa">
-              <p><%= reservation.name %></p>
+              <div class="initiateur-resa">
+                <p><%= reservation.user.name %></p>
+              </div>
+                <p><%= reservation.destination %></p>
             </div>
             <div class="date-resa">
               <p><%= reservation.name %></p>
