@@ -1,0 +1,41 @@
+.container-resa {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.tableau-resa {
+  position: absolute;
+  border: 1px solid black;
+  width: 60vw;
+  height: 70vh;
+  text-align: center;
+  overflow: scroll;
+}
+
+.tableau-resa::-webkit-scrollbar {
+    display: none;
+}
+
+.list-resa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.resa {
+  display: flex;
+  height: 10%;
+  width: 100%;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.titre-resa {
+  position: sticky;
+  top: 0%;
+  text-align: center;
+  z-index: 100;
+  background-color: white;
+  height: 20%;
+}

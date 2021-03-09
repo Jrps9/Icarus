@@ -26,20 +26,54 @@
   text-decoration: none;
   opacity: 0.8;
   transition: 1s ease;
-
-  span {
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  background-color: $acajoufonce;
-  transition: 1s ease-out;
+  transform-origin: center;
+    span {
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: $acajoufonce;
+    transition: 1s ease-out;
+    transform-origin: center;
+    &::before {
+      content :"";
+      position: absolute;
+      left: 20%;
+      background-color: black;
+      height: 1px;
+      width: 0%;
+      transform-origin: center;
+      transform: translate(-0%, 1000%);
+      transition: 1s ease-out;
+      transition-delay: 0.3s;
+    }
+    // &::after {
+    //   content :"";
+    //   position: absolute;
+    //   left: 40%;
+    //   background-color: black;
+    //   height: 1px;
+    //   width: 0%;
+    //   transform-origin: center;
+    //   transform: translate(-0%, 2000%);
+    //   transition: 1s ease-out;
+    //   transition-delay: 0.5s;
+    // }
   }
 
   &:hover {
     opacity: 1;
     text-decoration: none;
+          transform-origin: center;
     span {
       width: 100%;
+      //   &::before {
+      //   width: 60%;
+      //         transform-origin: center;
+      // }
+      //   &::after {
+      //   width: 25%;
+      //         transform-origin: center;
+      // }
     }
   }
 }

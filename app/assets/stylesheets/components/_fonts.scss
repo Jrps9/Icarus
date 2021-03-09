@@ -4,8 +4,23 @@ h5 {
   text-transform: uppercase;
   color: $acajoufonce;
   line-height: 1em;
+  transition: 1s ease-out;
+  // &:hover::before {
+  //   transition: 1s ease-out;
+  //   content: attr(data-text);
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   transform-origin: bottom;
+  //   transform: rotateX(180deg);
+  //   line-height: 0.86em;
+  //   background: linear-gradient(0deg, #231903, transparent 90%);
+  //   background-clip: text;
+  //   color: transparent;
+  //   opacity: 0.1;
+  // }
 }
 
-p {
+.crewcard p {
   line-height: 0.5;
 }

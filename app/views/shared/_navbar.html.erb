@@ -2,29 +2,29 @@
   <div class="barnav">
 
     <%= link_to root_path, class: "barnavlink" do%>
-    <h5>Icarus</h5><span></span>
+    <h5 data-text="Icarus">Icarus</h5><span></span>
     <% end %>
 
     <%= link_to equipage_path, class: "barnavlink" do%>
-    <h5>L'Equipage</h5><span></span>
+    <h5 data-text="L'Equipage">L'Equipage</h5><span></span>
     <% end %>
 
     <%= link_to reservations_path, class: "barnavlink" do%>
-    <h5>Calendrier</h5><span></span>
+    <h5 data-text="Calendrier">Calendrier</h5><span></span>
     <% end %>
 
     <%= link_to root_path, class: "barnavlink" do%>
-    <h5>Le Port</h5><span></span>
+    <h5 data-text="Le Port">Le Port</h5><span></span>
     <% end %>
 
   <% if user_signed_in? %>
     <%= link_to destroy_user_session_path, method: :delete, class: "barnavlink" do %>
-    <h5>Log-out</h5><span></span>
+    <h5 data-text="Log-out">Log-out</h5><span></span>
   <% end %>
 
   <% else %>
     <%= link_to new_user_session_path, class: "barnavlink" do %>
-    <h5>Login</h5><span></span>
+    <h5 data-text="Login">Login</h5><span></span>
     <% end %>
   <% end %>
 
