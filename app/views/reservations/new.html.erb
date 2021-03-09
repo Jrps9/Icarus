@@ -3,6 +3,10 @@
   <div class="resa">
     <%= simple_form_for (@reservation) do |f| %>
       <%= f.input :name %>
+      <%= f.input :nb_place %>
+      <%= f.input :start_day %>
+      <%= f.input :end_day %>
+      <%= f.input :destination %>
       <br>
       <%= f.button :submit, class: "barnavlink"%>
     <% end %>
