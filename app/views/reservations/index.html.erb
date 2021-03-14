@@ -1,77 +1,28 @@
 <div class="pageOpacity">
-  <h1>Calendrier Index</h1>
-  <% @reservations.each do |reservation| %>
-    <%= reservation.name %>
-  <% end %>
-
-  <%= link_to new_reservation_path, class: "barnavlink" do%>
-    <p>Nouvelleee reservation</p><span></span>
-  <% end %>
-
-  <div class="container-resa">
-    <div class="tableau-resa">
-      <div class="titre-resa">
-        <h1>Sorties Effectuées</h1>
-      </div>
-      <div class="list-resa">
-        <div class="resa">
-          <div class="initiateur-resa">
-            <p>j-Loup</p>
-          </div>
-          <div class="photo-resa">
-            <p>photo</p>
-          </div>
-          <div class="date-resa">
-            <p>15 Oct.</p>
-          </div>
+    <div class="container-resa">
+      <div class="tableau-resa">
+        <span class="bouee"></span>
+      <%= link_to new_reservation_path, class: "barnavlink" do%>
+      <p>Nouvelleee reservation</p><span></span>
+      <% end %>
+        <div class="titre-resa">
+          <h1>Sorties Effectuées</h1>
         </div>
-                <div class="resa">
-          <div class="initiateur-resa">
-            <p>j-Loup</p>
+        <div class="list-resa">
+          <% @reservations.each do |reservation| %>
+          <div class="resa">
+            <div class="photo-resa">
+              <div class="initiateur-resa">
+                <p><%= reservation.user.name %></p>
+              </div>
+                <p><%= reservation.destination %></p>
+            </div>
+            <div class="date-resa">
+              <p><%= reservation.name %></p>
+            </div>
           </div>
-          <div class="photo-resa">
-            <p>photo</p>
-          </div>
-          <div class="date-resa">
-            <p>15 Oct.</p>
-          </div>
-        </div>
-                <div class="resa">
-          <div class="initiateur-resa">
-            <p>j-Loup</p>
-          </div>
-          <div class="photo-resa">
-            <p>photo</p>
-          </div>
-          <div class="date-resa">
-            <p>15 Oct.</p>
-          </div>
-
-        </div>
-                <div class="resa">
-          <div class="initiateur-resa">
-            <p>j-Loup</p>
-          </div>
-          <div class="photo-resa">
-            <p>photo</p>
-          </div>
-          <div class="date-resa">
-            <p>15 Oct.</p>
-          </div>
-        </div>
-        <div class="resa">
-          <p>test</p>
-        </div>
-                <div class="resa">
-          <p>test</p>
-        </div>
-                <div class="resa">
-          <p>test</p>
+          <% end %>
         </div>
       </div>
-    </div>
   </div>
-
 </div>
-
-
