@@ -1,28 +1,28 @@
 <div class="pageOpacity">
-    <div class="container-resa">
-      <div class="tableau-resa">
-        <span class="bouee"></span>
-      <%= link_to new_reservation_path, class: "barnavlink" do%>
-      <p>Nouvelleee reservation</p><span></span>
-      <% end %>
-        <div class="titre-resa">
-          <h1>Sorties Effectuées</h1>
-        </div>
-        <div class="list-resa">
-          <% @reservations.each do |reservation| %>
-          <div class="resa">
-            <div class="photo-resa">
-              <div class="initiateur-resa">
-                <p><%= reservation.user.name %></p>
-              </div>
-                <p><%= reservation.destination %></p>
-            </div>
-            <div class="date-resa">
-              <p><%= reservation.name %></p>
-            </div>
-          </div>
-          <% end %>
-        </div>
+  <div class="container-resa">
+    <div class="tableau-resa">
+      <span class="bouee"></span>
+    <%= link_to new_reservation_path, class: "barnavlink" do%>
+    <p>Nouvelleee reservation</p><span></span>
+    <% end %>
+      <div class="titre-resa">
+        <h1>Sorties Effectuées</h1>
       </div>
+      <div class="list-resa">
+        <% @reservations.each do |reservation| %>
+        <div class="resa">
+          <div class="photo-resa">
+            <div class="initiateur-resa">
+              <p><%= reservation.user.name %></p>
+            </div>
+              <p><%= reservation.destination %></p>
+          </div>
+          <div class="date-resa">
+            <p><%= reservation.name %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

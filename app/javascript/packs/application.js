@@ -78,7 +78,6 @@ document.addEventListener('turbolinks:load', () => {
    }
 
    function rotator(e) {
-    console.log("coucou")
       barnav.addEventListener("mouseover", rot)
    }
 
